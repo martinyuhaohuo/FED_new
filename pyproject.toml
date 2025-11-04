@@ -1,10 +1,10 @@
-[FED GDP Analysis]
+[project]
 name = "gdp-analysis"
 version = "0.1.0"
 description = "GDP analysis for UK, USA, Brazil, Japan, China, Germany, and Switzerland from 2002-2022"
 authors = [
-    {name = "Hsin-Ta Tsai", email = "tsai.hsinta@gmail.com"}
-   
+    {name = "Hsin-Ta Tsai", email = "tsai.hsinta@gmail.com"},
+    {name = "Yuhao Huo", email = "martinyuhaohuo@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.8"
@@ -26,3 +26,14 @@ build-backend = "setuptools.build_system"
 
 [tool.setuptools]
 packages = ["."]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = [
+    "E203",  # whitespace before ':' — Black is compatible with this ignore
+    "W503",  # line break before binary operator — Black is compatible with this ignore
+]
